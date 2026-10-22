@@ -2,50 +2,47 @@
   <defs>
     <!-- Rich Metallic Gold Gradient -->
     <linearGradient id="igcGold" x1="10%" y1="10%" x2="95%" y2="85%">
-      <stop offset="0%" stop-color="#fff4d6"/>
-      <stop offset="18%" stop-color="#f7d88c"/>
-      <stop offset="48%" stop-color="#d9a842"/>
-      <stop offset="76%" stop-color="#ba8724"/>
-      <stop offset="100%" stop-color="#8c5e0d"/>
+      <stop offset="0%" stop-color="#fff8e2"/>
+      <stop offset="20%" stop-color="#f6dc92"/>
+      <stop offset="50%" stop-color="#d9a842"/>
+      <stop offset="80%" stop-color="#af7e1d"/>
+      <stop offset="100%" stop-color="#7a4f07"/>
     </linearGradient>
 
-    <!-- Inner Bevel Highlight -->
+    <!-- Inner Bevel Highlight Gradient -->
     <linearGradient id="goldBevel" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-      <stop offset="45%" stop-color="#fcedc2" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#734900" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#fdedc4" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#5a3802" stop-opacity="0.85"/>
     </linearGradient>
 
-    <!-- Drop Shadow for crisp luxury depth -->
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="3.5" stdDeviation="4" flood-color="#070d17" flood-opacity="0.32"/>
+    <!-- Clean Drop Shadow for Luxury Depth -->
+    <filter id="properTriangleShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#070d17" flood-opacity="0.32"/>
     </filter>
   </defs>
 
-  <!-- Main Triangle Body with Tangent Smooth Arc -->
-  <path d="M 44 188 L 44 87 A 45 45 0 0 1 114.57 49.97 L 216 120 L 49.5 193.6 A 6 6 0 0 1 44 188 Z" 
-        fill="url(#igcGold)" 
-        stroke="#84590c" 
-        stroke-width="1.5"
-        stroke-linejoin="round"
-        filter="url(#softShadow)"/>
+  <!-- Proper 3-Sided Triangle: 3 clean straight sides pointing forward/right as on business card -->
+  <polygon points="36,24 206,120 36,216" 
+           fill="url(#igcGold)" 
+           stroke="#7a4f07" 
+           stroke-width="2.2" 
+           stroke-linejoin="round"
+           filter="url(#properTriangleShadow)"/>
 
-  <!-- Inner Refined Hairline Bevel / Die-Cut Stroke -->
-  <path d="M 49 182 L 49 87 A 40 40 0 0 1 111.7 54.1 L 204 120 L 54.5 186.8 Z" 
-        fill="none" 
-        stroke="url(#goldBevel)" 
-        stroke-width="1.2" 
-        stroke-opacity="0.9"/>
+  <!-- Inner Refined Bevel Border -->
+  <polygon points="48,42 188,120 48,198" 
+           fill="none" 
+           stroke="url(#goldBevel)" 
+           stroke-width="1.8" 
+           stroke-linejoin="round"/>
 
-  <!-- Letters I, G, C (Clean, Bold, Proportional) -->
+  <!-- Letters I, G, C Stepped Harmoniously Inside the Triangle Away From Borders -->
   <g font-family="'Outfit', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
      font-weight="900" 
      fill="#0c1624">
-    <!-- Letter I -->
-    <text x="76" y="96" font-size="22" text-anchor="middle">I</text>
-    <!-- Letter G -->
-    <text x="98" y="127" font-size="22" text-anchor="middle">G</text>
-    <!-- Letter C -->
-    <text x="122" y="152" font-size="22" text-anchor="middle">C</text>
+    <text x="74" y="94" font-size="24" text-anchor="middle">I</text>
+    <text x="96" y="127" font-size="24" text-anchor="middle">G</text>
+    <text x="118" y="156" font-size="24" text-anchor="middle">C</text>
   </g>
 </svg>
