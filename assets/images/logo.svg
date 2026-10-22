@@ -1,123 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
   <defs>
-    <!-- Card Background Gradient -->
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141e30"/>
-      <stop offset="100%" stop-color="#090e17"/>
+    <!-- Rich Metallic Gold Gradient -->
+    <linearGradient id="igcGold" x1="10%" y1="10%" x2="95%" y2="85%">
+      <stop offset="0%" stop-color="#fff4d6"/>
+      <stop offset="18%" stop-color="#f7d88c"/>
+      <stop offset="48%" stop-color="#d9a842"/>
+      <stop offset="76%" stop-color="#ba8724"/>
+      <stop offset="100%" stop-color="#8c5e0d"/>
     </linearGradient>
 
-    <!-- Metallic Gold Gradient -->
-    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fdf4cf"/>
-      <stop offset="30%" stop-color="#d4af37"/>
-      <stop offset="70%" stop-color="#b88b20"/>
-      <stop offset="100%" stop-color="#7a5500"/>
+    <!-- Inner Bevel Highlight -->
+    <linearGradient id="goldBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#fcedc2" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#734900" stop-opacity="0.75"/>
     </linearGradient>
 
-    <!-- Pale Gold Inlay Gradient -->
-    <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#faedcd"/>
-      <stop offset="50%" stop-color="#e3c274"/>
-      <stop offset="100%" stop-color="#c99c36"/>
-    </linearGradient>
-
-    <!-- Gold Text Shadow / Emboss Filter -->
-    <filter id="goldShine" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.65"/>
+    <!-- Drop Shadow for crisp luxury depth -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3.5" stdDeviation="4" flood-color="#070d17" flood-opacity="0.32"/>
     </filter>
   </defs>
 
-  <!-- Card Base with Rounded Corners -->
-  <rect x="15" y="15" width="470" height="470" rx="44" ry="44" fill="url(#cardBg)" stroke="url(#goldGradient)" stroke-width="4"/>
+  <!-- Main Triangle Body with Tangent Smooth Arc -->
+  <path d="M 44 188 L 44 87 A 45 45 0 0 1 114.57 49.97 L 216 120 L 49.5 193.6 A 6 6 0 0 1 44 188 Z" 
+        fill="url(#igcGold)" 
+        stroke="#84590c" 
+        stroke-width="1.5"
+        stroke-linejoin="round"
+        filter="url(#softShadow)"/>
 
-  <!-- Subtle card inner border -->
-  <rect x="25" y="25" width="450" height="450" rx="36" ry="36" fill="none" stroke="#d4af37" stroke-width="1.2" stroke-opacity="0.35"/>
+  <!-- Inner Refined Hairline Bevel / Die-Cut Stroke -->
+  <path d="M 49 182 L 49 87 A 40 40 0 0 1 111.7 54.1 L 204 120 L 54.5 186.8 Z" 
+        fill="none" 
+        stroke="url(#goldBevel)" 
+        stroke-width="1.2" 
+        stroke-opacity="0.9"/>
 
-  <!-- TOP-LEFT: Signature Business Card Geometric Gold Triangle with I G C -->
-  <g id="cornerTriangle">
-    <!-- Main gold triangular badge -->
-    <path d="M 25 25 L 25 270 L 270 25 Z" fill="url(#goldLight)"/>
-    
-    <!-- Triangle bevel border -->
-    <path d="M 25 25 L 25 270 L 270 25 Z" fill="none" stroke="#7a5500" stroke-width="2" stroke-opacity="0.5"/>
-    
-    <!-- Inner accent stroke -->
-    <path d="M 33 33 L 33 245 L 245 33 Z" fill="none" stroke="#fdf4cf" stroke-width="1.5" stroke-opacity="0.8"/>
-
-    <!-- Letters I G C arranged vertically inside the gold triangle as on visiting card -->
-    <g font-family="'Times New Roman', 'Cinzel', 'Playfair Display', Georgia, serif" font-weight="700" fill="#2d2208" text-anchor="middle">
-      <text x="80" y="95" font-size="36" letter-spacing="2">I</text>
-      <text x="80" y="145" font-size="36" letter-spacing="2">G</text>
-      <text x="80" y="195" font-size="36" letter-spacing="2">C</text>
-    </g>
-  </g>
-
-  <!-- BOTTOM-RIGHT: Business Card Geometric Accent Stripes -->
-  <g id="cornerAccents">
-    <!-- Outer gold triangular flap -->
-    <path d="M 475 350 L 475 475 L 350 475 Z" fill="url(#goldLight)"/>
-    <!-- Diagonal white / pale separation stripe -->
-    <path d="M 475 330 L 475 345 L 330 475 L 315 475 Z" fill="#ffffff" fill-opacity="0.85"/>
-    <path d="M 475 315 L 475 325 L 305 475 L 295 475 Z" fill="url(#goldGradient)" fill-opacity="0.7"/>
-  </g>
-
-  <!-- TOP-RIGHT: Fleet Details from Card -->
-  <g font-family="'Outfit', sans-serif" text-anchor="end">
-    <text x="450" y="70" font-size="15" font-family="'Playfair Display', Georgia, serif" font-style="italic" fill="#dcd3c1">Hari Singh Jhooria</text>
-    <text x="450" y="96" font-size="18" font-weight="700" fill="#fdf4cf" letter-spacing="1.5">9303444449</text>
-  </g>
-
-  <!-- CENTER LOGO CONTENT -->
-  <!-- Top subtitle: Fleet Owner & Transport Contractor -->
-  <text x="250" y="240" 
-        font-family="'Playfair Display', 'Brush Script MT', Georgia, serif" 
-        font-style="italic" 
-        font-size="19" 
-        fill="#e5decb" 
-        text-anchor="middle"
-        letter-spacing="0.5">
-    Fleet Owner &amp; Transport Contractor
-  </text>
-
-  <!-- Main Brand Title: INDORE GUJRAT CARRIER in Embossed Metallic Gold -->
-  <g filter="url(#goldShine)">
-    <text x="250" y="282" 
-          font-family="'Outfit', 'Montserrat', 'Helvetica Neue', Arial, sans-serif" 
-          font-weight="900" 
-          font-size="28" 
-          fill="url(#goldGradient)" 
-          text-anchor="middle" 
-          letter-spacing="1.5">
-      INDORE GUJRAT
-    </text>
-    <text x="250" y="320" 
-          font-family="'Outfit', 'Montserrat', 'Helvetica Neue', Arial, sans-serif" 
-          font-weight="900" 
-          font-size="32" 
-          fill="url(#goldGradient)" 
-          text-anchor="middle" 
-          letter-spacing="3.5">
-      CARRIER
-    </text>
-  </g>
-
-  <!-- Bottom subtitle: Time Bound Door to Door Service -->
-  <text x="250" y="356" 
-        font-family="'Playfair Display', Georgia, serif" 
-        font-style="italic" 
-        font-size="18" 
-        fill="#dcd3be" 
-        text-anchor="middle"
-        letter-spacing="0.5">
-    Time Bound Door to Door Service
-  </text>
-
-  <!-- Gold separator line under subtitle -->
-  <line x1="85" y1="372" x2="415" y2="372" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Godown location tag at bottom -->
-  <g font-family="'Outfit', sans-serif" font-size="12" fill="#9eaab9" text-anchor="middle">
-    <text x="250" y="405" font-weight="600" fill="#e8dfce" letter-spacing="1">DEWAS NAKA, INDORE ⇄ ASLALI, AHMEDABAD</text>
-    <text x="250" y="426" fill="#818e9f">Daily Express Direct Fleet • Est. 20+ Years</text>
+  <!-- Letters I, G, C (Clean, Bold, Proportional) -->
+  <g font-family="'Outfit', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+     font-weight="900" 
+     fill="#0c1624">
+    <!-- Letter I -->
+    <text x="76" y="96" font-size="22" text-anchor="middle">I</text>
+    <!-- Letter G -->
+    <text x="98" y="127" font-size="22" text-anchor="middle">G</text>
+    <!-- Letter C -->
+    <text x="122" y="152" font-size="22" text-anchor="middle">C</text>
   </g>
 </svg>
