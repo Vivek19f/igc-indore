@@ -289,6 +289,10 @@ function setupScrollAnimations() {
   });
 
   document.querySelectorAll('.anim-fade-up, .anim-fade-left, .anim-fade-right, .anim-scale-in').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    }
     observer.observe(el);
   });
 }
