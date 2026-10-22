@@ -338,10 +338,14 @@ function setupCounters() {
   counters.forEach(c => observer.observe(c));
 }
 
+// Expose globally for inline onclick handlers
+window.inquireRoute = inquireRoute;
+window.setLanguage = setLanguage;
+
 // ========================
 // INIT
 // ========================
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   setLanguage(localStorage.getItem('igc_lang') || 'en');
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -358,4 +362,10 @@ document.addEventListener('DOMContentLoaded', () => {
   setupScrollAnimations();
   setupNavbarScroll();
   setupCounters();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
