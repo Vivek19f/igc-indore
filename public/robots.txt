@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Direct links to sitemap
+Sitemap: https://indoregujratcarrier.com/sitemap.xml

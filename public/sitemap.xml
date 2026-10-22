@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://indoregujratcarrier.com/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://indoregujratcarrier.com/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://indoregujratcarrier.com/?lang=hi" />
+    <image:image>
+      <image:loc>https://indoregujratcarrier.com/assets/images/logo.png</image:loc>
+      <image:title>Indore Gujrat Carrier Official Brand Logo</image:title>
+      <image:caption>Indore Gujrat Carrier (IGC) — Fleet Owners &amp; Transport Contractors Indore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://indoregujratcarrier.com/assets/images/igc-truck-hero.jpg</image:loc>
+      <image:title>Indore Gujrat Carrier Container Fleet Truck</image:title>
+      <image:caption>Direct Express Transport Fleet Truck between Indore, Dewas and Ahmedabad, Surat</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -1986,6 +1986,113 @@ button, input, select, textarea {
 }
 
 /* ===================================================================
+   FAQ SECTION (SEO ACCORDION)
+   =================================================================== */
+.faq-section {
+  padding: 5rem 0;
+  background: #f8fafc;
+  position: relative;
+}
+
+.faq-container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(12, 22, 36, 0.08);
+  box-shadow: 0 4px 14px rgba(12, 22, 36, 0.04);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-item:hover {
+  border-color: rgba(212, 163, 57, 0.4);
+  box-shadow: 0 8px 24px rgba(12, 22, 36, 0.08);
+}
+
+.faq-item.active {
+  border-color: #d4a339;
+  box-shadow: 0 8px 28px rgba(12, 22, 36, 0.1);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-navy, #0c1624);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.faq-question-btn:hover {
+  color: #b07f18;
+}
+
+.faq-item.active .faq-question-btn {
+  color: #8c6007;
+}
+
+.faq-icon-arrow {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(12, 22, 36, 0.05);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  color: var(--primary-navy, #0c1624);
+}
+
+.faq-item.active .faq-icon-arrow {
+  transform: rotate(180deg);
+  background: #fdf4db;
+  color: #7a4f07;
+}
+
+.faq-answer-panel {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+  color: #3b4d63;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.faq-item.active .faq-answer-panel {
+  max-height: 300px;
+  opacity: 1;
+  visibility: visible;
+  padding: 0 1.5rem 1.35rem 1.5rem;
+}
+
+.faq-answer-panel strong {
+  color: var(--primary-navy, #0c1624);
+}
+
+/* ===================================================================
    PRINT STYLES
    =================================================================== */
 @media print {
@@ -1993,3 +2100,4 @@ button, input, select, textarea {
     display: none !important;
   }
 }
+

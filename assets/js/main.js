@@ -94,6 +94,21 @@ const translations = {
     check_damage: 'Safe Handling & Zero Damage Assurance',
     cta_title: 'Ready to Ship Your Cargo?',
     cta_sub: 'Get the best freight rate for your consignment in under 2 minutes. No paperwork, no wait — instant WhatsApp quote.',
+    faq_tag: 'FREQUENTLY ASKED QUESTIONS',
+    faq_title: 'Everything You Need to Know About Our Transport Service',
+    faq_sub: 'Clear answers on booking, daily transit times, godown locations, bilty tracking, and door-to-door delivery.',
+    faq_q1: 'What transport routes does Indore Gujrat Carrier operate daily?',
+    faq_a1: 'We run daily direct container and open fleet trucks connecting Indore (Dewas Naka, Pithampur, Dewas, Ujjain) with all major Gujarat destinations: Ahmedabad (Aslali), Surat, Vadodara (Baroda), Rajkot, Vapi, Ankleshwar, Bharuch, and Gandhidham.',
+    faq_q2: 'Where is your Indore central godown located and how can I contact you?',
+    faq_a2: 'Our central head office and main godown is located at <strong>Godown No. 23, Roshan Compound, A.B. Road, Dewas Naka, Indore – 452 010 (M.P.)</strong>. You can call our 24x7 helpline at <strong>+91 93034 44449</strong>, <strong>+91 93032 33706</strong>, or office landline <strong>0731-4048469</strong>.',
+    faq_q3: 'What is the average delivery transit time from Indore to Gujarat?',
+    faq_a3: 'Our express fleet departs daily at 8:00 PM evening. Average transit time is <strong>12 to 14 hours</strong> for Ahmedabad, <strong>11 to 13 hours</strong> for Vadodara, and <strong>14 to 16 hours</strong> for Surat, ensuring reliable next-day morning delivery.',
+    faq_q4: 'How do I book Full Truck Load (FTL) or small parcel cargo?',
+    faq_a4: 'Booking is quick and hassle-free. Fill out the Quick Rate form above, WhatsApp your consignment details to <strong>+91 93034 44449</strong>, or call our branch directly for instant rates and same-day vehicle placement.',
+    faq_q5: 'Do you provide doorstep pickup and delivery in industrial areas?',
+    faq_a5: 'Yes, we offer complete door-to-door logistics with pickup directly from your factory or godown in Indore, Pithampur SEZ, Sanwer Road, or Dewas, and safe doorstep delivery across all of Gujarat with proper GST documentation.',
+    faq_q6: 'How can I track my Bilty / LR consignment status?',
+    faq_a6: 'Simply enter your Bilty / LR number in the status box on this page or WhatsApp your Bilty number to <strong>+91 93034 44449</strong> to receive live location and dispatch status directly from our godown desk.',
     mobile_call: 'Call Now',
     mobile_whatsapp: 'WhatsApp'
   },
@@ -173,6 +188,21 @@ const translations = {
     check_damage: 'माल की पूरी सुरक्षा और सुरक्षित हैंडलिंग',
     cta_title: 'माल भेजना है?',
     cta_sub: '2 मिनट में बेस्ट फ्रेट रेट जानें। कोई कागज़ी कार्रवाई नहीं — सीधा व्हाट्सएप पर तुरंत रेट।',
+    faq_tag: 'अक्सर पूछे जाने वाले सवाल (FAQ)',
+    faq_title: 'ट्रांसपोर्ट सर्विस से जुड़े महत्वपूर्ण सवाल और उनके जवाब',
+    faq_sub: 'बुकिंग, डिलीवरी समय, इंदौर-अहमदाबाद गोदाम, बिल्टी ट्रैकिंग और डोर डिलीवरी की पूरी जानकारी।',
+    faq_q1: 'इंदौर गुजरात कैरियर रोज़ाना किन-किन रूट्स पर सर्विस देता है?',
+    faq_a1: 'हम रोज़ाना इंदौर (देवास नाका, पीथमपुर, देवास, उज्जैन) से गुजरात के सभी प्रमुख शहरों — अहमदाबाद (असलाली), सूरत, वडोदरा (बड़ौदा), राजकोट, वापी, अंकलेश्वर, भरूच और गांधीधाम के लिए डायरेक्ट गाड़ियां चलाते हैं।',
+    faq_q2: 'इंदौर में आपका गोदाम कहाँ है और संपर्क नंबर क्या है?',
+    faq_a2: 'हमारा मुख्य ऑफिस व गोदाम <strong>गोदाम नं. 23, रोशन कंपाउंड, ए. बी. रोड, देवास नाका, इंदौर (म.प्र.)</strong> में स्थित है। 24 घंटे सहायता के लिए <strong>+91 93034 44449</strong>, <strong>+91 93032 33706</strong> या <strong>0731-4048469</strong> पर संपर्क करें।',
+    faq_q3: 'इंदौर से गुजरात माल पहुँचने में कितना समय लगता है?',
+    faq_a3: 'हमारी गाड़ियां हर शाम 8:00 बजे देवास नाका से सीधी रवाना होती हैं। अहमदाबाद <strong>12 से 14 घंटे</strong>, वडोदरा <strong>11 से 13 घंटे</strong>, और सूरत <strong>14 से 16 घंटे</strong> में अगली सुबह सुरक्षित माल पहुँच जाता है।',
+    faq_q4: 'पूरा ट्रक (FTL) या छोटा पार्सल कैसे बुक करें?',
+    faq_a4: 'बुकिंग बेहद आसान है। इस पेज पर दिए फॉर्म से व्हाट्सएप पर तुरंत रेट पूछें या हमारे हेल्पलाइन नंबर <strong>+91 93034 44449</strong> पर कॉल करें। तुरंत रेट और उसी दिन गाड़ी प्लेसमेंट की सुविधा उपलब्ध है।',
+    faq_q5: 'क्या पीथमपुर और देवास की फैक्ट्रियों से डोर पिकअप मिलता है?',
+    faq_a5: 'जी हाँ, इंदौर, सांवेर रोड, पीथमपुर इंडस्ट्रियल एरिया और देवास से आपकी फैक्ट्री या दुकान से सीधा माल उठाने और गुजरात में सीधे पते पर डोर डिलीवरी की पक्की सुविधा उपलब्ध है।',
+    faq_q6: 'बिल्टी (LR) का स्टेटस कैसे चेक करें?',
+    faq_a6: 'हमारी वेबसाइट पर अपना बिल्टी / LR नंबर डालें या व्हाट्सएप <strong>+91 93034 44449</strong> पर बिल्टी नंबर भेजें। गोदाम डेस्क से तुरंत माल की वर्तमान लोकेशन की जानकारी दी जाएगी।',
     mobile_call: 'कॉल करें',
     mobile_whatsapp: 'व्हाट्सएप करें'
   }
@@ -342,6 +372,29 @@ function setupCounters() {
   counters.forEach(c => observer.observe(c));
 }
 
+// ========================
+// FAQ ACCORDION HANDLER
+// ========================
+function setupFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question-btn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        const b = i.querySelector('.faq-question-btn');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
 // Expose globally for inline onclick handlers
 window.inquireRoute = inquireRoute;
 window.setLanguage = setLanguage;
@@ -366,6 +419,7 @@ function initApp() {
   setupScrollAnimations();
   setupNavbarScroll();
   setupCounters();
+  setupFaqAccordion();
 }
 
 if (document.readyState === 'loading') {
@@ -373,3 +427,4 @@ if (document.readyState === 'loading') {
 } else {
   initApp();
 }
+
