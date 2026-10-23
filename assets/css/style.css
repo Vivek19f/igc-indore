@@ -2472,3 +2472,13 @@ button, input, select, textarea {
   }
 }
 
+
+.hero-brand-kicker {
+  display: block;
+  font-size: clamp(1.35rem, 3.2vw, 2.1rem);
+  font-weight: 800;
+  color: var(--gold-bright);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
