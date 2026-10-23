@@ -1280,9 +1280,9 @@ button, input, select, textarea {
 .fleet-reg-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 0.5rem;
   margin-bottom: 0.85rem;
+  flex-wrap: wrap;
 }
 
 .fleet-reg-badge {
