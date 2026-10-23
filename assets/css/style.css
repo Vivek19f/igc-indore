@@ -46,7 +46,7 @@
 
   /* Fonts */
   --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-hindi: 'Mukta', 'Hind', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hindi: 'Noto Sans Devanagari', 'Mukta', 'Hind', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* ===================================================================
@@ -80,6 +80,43 @@ body {
 body.lang-hi {
   font-family: var(--font-hindi), var(--font-primary);
 }
+
+body.lang-hi *,
+body.lang-hi *::before,
+body.lang-hi *::after {
+  letter-spacing: 0 !important;
+}
+
+body.lang-hi h1,
+body.lang-hi h2,
+body.lang-hi h3,
+body.lang-hi h4,
+body.lang-hi h5,
+body.lang-hi h6,
+body.lang-hi .section-title,
+body.lang-hi .hero-title,
+body.lang-hi .cta-title,
+body.lang-hi .founder-title,
+body.lang-hi .route-title,
+body.lang-hi strong,
+body.lang-hi b {
+  font-family: var(--font-hindi), var(--font-primary) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  text-transform: none !important;
+}
+
+body.lang-hi .section-tag,
+body.lang-hi .hero-pill-badge,
+body.lang-hi .stat-label,
+body.lang-hi .btn-primary,
+body.lang-hi .btn-submit-quote,
+body.lang-hi .bilty-btn,
+body.lang-hi .service-hindi-title {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
 
 img {
   max-width: 100%;
@@ -810,6 +847,8 @@ button, input, select, textarea {
 
 .bilty-input {
   flex: 1;
+  min-width: 0;
+  width: 100%;
   padding: 0.75rem 1rem;
   border: 2px solid var(--border-color);
   border-radius: var(--radius-sm);
@@ -833,6 +872,10 @@ button, input, select, textarea {
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bilty-btn:hover {
@@ -845,6 +888,40 @@ button, input, select, textarea {
   color: var(--text-muted);
   margin-top: 0.35rem;
 }
+
+@media (max-width: 768px) {
+  .direct-action-strip {
+    margin-top: 1.25rem;
+    padding: 1.25rem 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .direct-action-strip {
+    margin-top: 1rem;
+    padding: 1.15rem 0.85rem;
+  }
+
+  .bilty-search-form {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .bilty-input {
+    width: 100%;
+    min-width: 0;
+    font-size: 0.9rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .bilty-btn {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+}
+
 
 .direct-call-badge {
   display: flex;
@@ -1029,10 +1106,13 @@ button, input, select, textarea {
 }
 
 .service-hindi-title {
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-family: var(--font-hindi);
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--gold);
   margin-bottom: 0.75rem;
+  letter-spacing: 0;
+  line-height: 1.35;
 }
 
 .service-desc {
