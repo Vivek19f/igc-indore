@@ -1439,132 +1439,479 @@ button, input, select, textarea {
 }
 
 /* ===================================================================
-   9. ABOUT SECTION (with parallax background overlay)
+   9. FOUNDER'S FOCUS & LEADERSHIP SECTION
    =================================================================== */
-.about-parallax-wrap {
+.founder-section {
   position: relative;
-  background: linear-gradient(135deg, rgba(10, 22, 40, 0.07), rgba(200, 162, 78, 0.05));
+  background: radial-gradient(circle at 10% 20%, rgba(200, 162, 78, 0.08) 0%, transparent 45%),
+              radial-gradient(circle at 90% 80%, rgba(10, 22, 40, 0.06) 0%, transparent 50%),
+              #f8faff;
+  padding: 5rem 0;
 }
 
-.about-card {
+.founder-card {
   background: #ffffff;
-  border-radius: var(--radius-lg);
-  padding: 0;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-lg);
+  border-radius: 24px;
+  border: 1px solid rgba(200, 162, 78, 0.3);
+  box-shadow: 0 25px 60px -15px rgba(10, 22, 40, 0.1), 0 0 0 1px rgba(200, 162, 78, 0.12);
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-grid {
+.founder-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
   align-items: stretch;
 }
 
 @media (min-width: 992px) {
-  .about-grid {
-    grid-template-columns: 1fr 1fr;
+  .founder-grid {
+    grid-template-columns: 440px 1fr;
   }
 }
 
-.about-img-wrap {
+@media (min-width: 1200px) {
+  .founder-grid {
+    grid-template-columns: 460px 1fr;
+  }
+}
+
+/* LEFT COLUMN: Executive Portrait & Direct Contact */
+.founder-media-col {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #07111f 0%, #0d1e38 100%);
+  padding: 1.75rem;
+  gap: 1.25rem;
+  justify-content: space-between;
   position: relative;
-  overflow: hidden;
-  min-height: 380px;
-}
-
-.about-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.about-card:hover .about-img-wrap img {
-  transform: scale(1.05);
-}
-
-.about-floating-tag {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  background: rgba(10, 22, 40, 0.92);
-  color: #ffffff;
-  padding: 1rem 1.5rem;
-  border-radius: var(--radius-md);
-  border-left: 4px solid var(--gold);
-  backdrop-filter: blur(10px);
-}
-
-.tag-title {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--gold-bright);
-}
-
-.tag-sub {
-  font-size: 0.82rem;
-  color: #b8c5d6;
-}
-
-.about-content {
-  padding: 2.5rem;
+  border-bottom: 1px solid rgba(200, 162, 78, 0.2);
 }
 
 @media (min-width: 992px) {
-  .about-content { padding: 3rem; }
+  .founder-media-col {
+    border-bottom: none;
+    border-right: 1px solid rgba(200, 162, 78, 0.2);
+    padding: 2.25rem;
+  }
+  .founder-portrait-frame {
+    flex: 1;
+    min-height: 520px;
+    aspect-ratio: auto;
+  }
 }
 
-.about-content-heading {
-  font-size: 1.75rem;
+.founder-portrait-frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 162, 78, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  background: #0a1628;
+  aspect-ratio: 4 / 5;
+  display: flex;
+}
+
+.founder-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 16%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.founder-card:hover .founder-portrait-img {
+  transform: scale(1.03);
+}
+
+.founder-portrait-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 17, 31, 0.05) 0%, rgba(7, 17, 31, 0.25) 55%, rgba(7, 17, 31, 0.92) 100%);
+  pointer-events: none;
+}
+
+.founder-badge-top {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(7, 17, 31, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--gold-bright);
+  border: 1px solid rgba(200, 162, 78, 0.5);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.badge-icon {
+  color: var(--gold-bright);
+  font-size: 0.85rem;
+}
+
+.founder-floating-caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.founder-name {
+  font-size: 1.35rem;
   font-weight: 900;
-  color: var(--primary-navy);
-  line-height: 1.3;
-  margin-bottom: 1rem;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-.about-content-text {
-  font-size: 0.98rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 1.25rem;
+.founder-designation {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold-bright);
+  margin-top: 0.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.about-feature-checks {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+.founder-subtag {
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  margin-top: 0.25rem;
+  font-weight: 500;
 }
 
-@media (min-width: 480px) {
-  .about-feature-checks { grid-template-columns: 1fr 1fr; }
-}
-
-.check-item {
+/* Direct Hotline Strip */
+.founder-direct-call-strip {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 162, 78, 0.32);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.75rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.strip-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(200, 162, 78, 0.18);
+  color: var(--gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(200, 162, 78, 0.35);
+}
+
+.strip-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.strip-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   font-weight: 700;
+  line-height: 1.2;
+}
+
+.strip-number {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.15rem;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.strip-number:hover {
+  color: var(--gold-bright);
+}
+
+.strip-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #25d366;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.strip-wa-btn:hover {
+  background: #20bd5a;
+  transform: translateY(-1px);
+}
+
+/* RIGHT COLUMN: Content & Leadership Narrative */
+.founder-content-col {
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .founder-content-col {
+    padding: 3.25rem 3rem;
+  }
+}
+
+.founder-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.85rem;
+}
+
+.founder-tag {
+  letter-spacing: 0.08em;
+}
+
+.founder-established-pill {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--gold-deep);
+  background: rgba(200, 162, 78, 0.12);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(200, 162, 78, 0.28);
+}
+
+.founder-heading {
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+  font-weight: 900;
+  color: var(--primary-navy);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+/* Founder's Signature Quote Callout */
+.founder-quote-box {
+  position: relative;
+  background: linear-gradient(135deg, rgba(200, 162, 78, 0.09) 0%, rgba(10, 22, 40, 0.03) 100%);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+  padding: 1.25rem 1.5rem 1.25rem 2.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.quote-mark {
+  position: absolute;
+  left: 0.85rem;
+  top: 0.15rem;
+  font-size: 3.2rem;
+  line-height: 1;
+  font-family: Georgia, serif;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.quote-text {
+  font-size: 0.98rem;
+  font-style: italic;
+  color: #1e293b;
+  line-height: 1.65;
+  margin: 0 0 0.65rem 0;
+  font-weight: 500;
+}
+
+.quote-author-sig {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.sig-name {
+  font-weight: 900;
   color: var(--primary-navy);
   font-size: 0.92rem;
 }
 
-.check-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: var(--radius-full);
+.sig-role {
+  font-size: 0.8rem;
+  color: var(--gold-deep);
+  font-weight: 700;
+}
+
+/* Story paragraphs */
+.founder-story {
+  margin-bottom: 1.5rem;
+}
+
+.founder-story-p {
+  font-size: 0.96rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
+}
+
+.founder-story-p:last-child {
+  margin-bottom: 0;
+}
+
+/* 4 Leadership Pillars */
+.founder-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (min-width: 600px) {
+  .founder-pillars-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pillar-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.95rem;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(200, 162, 78, 0.45);
+  box-shadow: 0 8px 20px rgba(10, 22, 40, 0.06);
+  background: #ffffff;
+}
+
+.pillar-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
   background: linear-gradient(135deg, #fdf6e3, #fef8ec);
   color: var(--gold-deep);
+  border: 1px solid var(--border-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
   flex-shrink: 0;
-  border: 1px solid var(--border-gold);
-  font-weight: 900;
 }
+
+.pillar-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin: 0 0 0.15rem 0;
+  line-height: 1.3;
+}
+
+.pillar-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Trust Stats Strip */
+.founder-stats-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(135deg, #07111f, #0d1e38);
+  color: #ffffff;
+  padding: 1.1rem 1.5rem;
+  border-radius: 14px;
+  border: 1px solid rgba(200, 162, 78, 0.35);
+  box-shadow: 0 10px 25px rgba(10, 22, 40, 0.15);
+}
+
+.fstat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.fstat-num {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+
+.fstat-lbl {
+  font-size: 0.72rem;
+  color: #b8c5d6;
+  margin-top: 0.35rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.fstat-divider {
+  width: 1px;
+  height: 30px;
+  background: rgba(200, 162, 78, 0.3);
+}
+
+@media (max-width: 480px) {
+  .founder-section {
+    padding: 3.5rem 0;
+  }
+  .founder-media-col {
+    padding: 1.25rem;
+  }
+  .founder-content-col {
+    padding: 1.75rem 1.25rem;
+  }
+  .founder-quote-box {
+    padding: 1rem 1rem 1rem 2.25rem;
+  }
+  .quote-mark {
+    left: 0.5rem;
+    font-size: 2.5rem;
+  }
+  .founder-stats-strip {
+    padding: 0.85rem 0.5rem;
+  }
+  .fstat-num {
+    font-size: 1.25rem;
+  }
+  .fstat-lbl {
+    font-size: 0.65rem;
+  }
+}
+
+/* Backward compatibility */
+.about-parallax-wrap { position: relative; }
+.about-card { background: #ffffff; border-radius: var(--radius-lg); }
+.about-grid { display: grid; }
 
 /* ===================================================================
    10. CTA BANNER PARALLAX

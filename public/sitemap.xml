@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://indoregujratcarrier.com/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://indoregujratcarrier.com/" />
@@ -18,6 +18,11 @@
       <image:loc>https://indoregujratcarrier.com/assets/images/igc-truck-hero.jpg</image:loc>
       <image:title>Indore Gujrat Carrier Container Fleet Truck</image:title>
       <image:caption>Direct Express Transport Fleet Truck between Indore, Dewas and Ahmedabad, Surat</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://indoregujratcarrier.com/assets/images/hari-singh-jhooria.jpg</image:loc>
+      <image:title>Mr. Hari Singh Jhooria — Founder and Managing Director Indore Gujrat Carrier</image:title>
+      <image:caption>Mr. Hari Singh Jhooria, Founder of Indore Gujrat Carrier, leading Central India transport and logistics</image:caption>
     </image:image>
   </url>
 </urlset>
