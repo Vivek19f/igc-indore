@@ -1,5 +1,28 @@
 User-agent: *
 Allow: /
 
-# Direct links to sitemap
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI Search & Answer Engine Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Direct link to sitemap
 Sitemap: https://indoregujaratcarrier.in/sitemap.xml
